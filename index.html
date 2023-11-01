@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>welcome to html</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    </head>
+    <body>
+
+        <style>
+            .menu ul li{
+                padding: 10px 30px;
+                background: blue;
+                color: white;
+                width: 50%;
+                list-style: none;
+                margin: 18px 12px;
+            }
+            .menu ul {
+                background-color: black;
+                height: 100vh;
+                width: 17%;
+            }
+            #slide{
+                transform: translateX(-290px);
+            }
+            .btn #close{
+                display: none;
+            }
+        </style>
+
+        <div class="main-slider">
+            <div class="btn">
+                <button id="open" onclick="Open()"><i class="fa-solid fa-bars"></i></button>
+                <button id="close" onclick="Close()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="menu">
+                <ul id="slide">
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+       
+            const menudata=document.getElementById("slide")
+            const openbtn=document.getElementById("open")
+            const closebtn=document.getElementById("close")
+
+            function Open(){
+                menudata.style.transform="translateX(2px)"
+                menudata.style.transition="all ease 1.5s"
+                openbtn.style.display="none"
+                closebtn.style.display="block"
+            }
+
+            function Close(){
+                menudata.style.transform="translateX(-290px)"
+                menudata.style.transition="all ease 1.5s"
+                openbtn.style.display="block"
+                closebtn.style.display="none"
+            }
+    </script>
+
+    </body>
+</html>

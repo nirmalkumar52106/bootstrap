@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<style>
+.slider .btn button{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: blue;
+    color: white;
+}
+#nav{
+    transform: translateX(-290px);
+}
+
+li{
+    color: black;
+    background-color: brown;
+    width: fit-content;
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+#close{
+    display: none;
+}
+</style>
+<body>
+
+    <div class="slider">
+        <div class="btn">
+            <button onclick="Open()" id="open">Open</button>
+            <button onclick="Close()" id="close">Close</button>
+        </div>
+        <div id="nav">
+            <ul>
+                <li>Home</li>
+                <li>Hom</li>
+                <li>Hom</li>
+                <li>Hom</li>
+                <li>Hom</li>
+                <li>Hom</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        const click1=document.getElementById("open")
+        const click2=document.getElementById("close")
+        const slider=document.getElementById("nav")
+
+       function Open(){
+        click1.style.display="none"
+        click2.style.display="block"
+        slider.style.transform="translateX(2px)"
+         slider.style.transition="all ease 1.5s"
+       }
+       function Close(){
+        click1.style.display="block"
+        click2.style.display="none"
+        slider.style.transform="translateX(-290px)"
+        slider.style.transition="all easeout 1.5s"
+       }
+
+
+    </script>
+</body>
+</html>

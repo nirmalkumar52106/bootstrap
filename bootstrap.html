@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    ul{display: none;}
+    #closetn{display: none;}
+  </style>
+  <div class="menu">
+    <button id="opendata" onclick="Open()"><img width="80px" src="../hamburger-menu.webp" alt=""></button>
+    <button onclick="Close()" id="closetn">close</button>
+  </div>
+  <ul id="data">
+    <li class="animate__animated animate__backInLeft" >home</li>
+    <li>home</li>
+    <li>home</li>
+    <li>home</li>
+    <li>home</li>
+  </ul>
+  <div>
+    <img class=" animate__animated animate__fadeInBottomRight" src="../imagesnahhargarh.jpeg"/>
+  </div>
+  
+  <script>
+    const data=document.getElementById("data")
+    const closebtndata=document.getElementById("closetn")
+    const opendaatbtn=document.getElementById("opendata")
+    function Open(){
+      data.style.display="block"
+      closebtndata.style.display="block"
+      opendaatbtn.style.display="none"
+    }
+    function Close(){
+      data.style.display="none"
+      opendaatbtn.style.display="block"
+      closebtndata.style.display="none"
+
+
+    }
+   
+              
+              new WOW().init();
+               
+  </script>
+</body>
+</html>
